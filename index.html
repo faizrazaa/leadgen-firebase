@@ -1,0 +1,16 @@
+<h2>Lead Form</h2>
+<form id="leadForm">
+  <input name="name" placeholder="Name" required>
+  <input name="email" placeholder="Email" required>
+  <textarea name="message" placeholder="Message"></textarea>
+  <button type="submit">Submit</button>
+</form>
+
+<script type="module" src="script.js"></script>
+<script>
+document.getElementById("leadForm").onsubmit = async (e) => {
+  e.preventDefault();
+  const data = Object.fromEntries(new FormData(e.target).entries());
+  await submitLead(data);
+};
+</script>
