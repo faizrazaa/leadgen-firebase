@@ -73,3 +73,4 @@ window.login = login;
 window.submitLead = submitLead;
 window.getLeads = getLeads;
 window.deleteLead = deleteLead;
+
